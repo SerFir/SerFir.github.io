@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"> <!--указание кодировки-->
+	<title>SARS-CoV-2</title>
+	<link rel="stylesheet" href="css/style.css"><!--подключение стилей-->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image\x-icon"> <!--иконка-->
+	<meta name="keywords" content="Пять поколений ПК">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="content">
+			<header>
+				<div id="logo">
+						<a href="index.html" title="На главную страницу"><img src="img/logo.png" title="SARS-CoV-2" alt="SARS-CoV-2">
+								<span>SARS-CoV-2</span>
+						</a>
+				</div>
+			</header>
+
+			<nav>
+				<div id="menuShow">
+					<img src="img/menu.png">
+				</div>
+				<div id="hideMenu">
+					<a href="index.html" title="">Главная</a>
+					<a href="Glossary.html" title="">Ресурсы</a>
+					
+				</div>
+				<div id="mobileMenu">
+					<br>
+					<a href="index.html" title="">Главная</a><br>
+					<a href="Glossary.html" title="">Ресурсы</a><br>
+					
+				</div>
+			</nav>
+			
+
+			<div id="main">
+				<div id="news">
+					<a href="index.html"><img src="img/home.png" title="Главная" alt=""></a>
+				<!---->
+
+					<div style="clear": both><br></div>
+					<br>	
+			<div id="article">
+				<h2>SARS-CoV-2</h2>
+				<hr>
+				<img src="img/korona.jpg">
+				<br>
+				<p> <b>SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2)</b>, он же <b>2019-nCoV (2019-Novel Coronavirus)</b> – штамм коронавируса, из рода бетакоронавирусов (Betacoronavirus), обнаруженный в конце 2019 года у больных с пневмонией в Китае и по состоянию на начало 2020 года получивший широкое распространение по всему миру
+				<br>
+				<br>
+				9 февраля 2020 года Государственный комитет по здравоохранению КНР назначил для болезни, вызванной китайским коронавирусом SARS-CoV-2 новое временное название — <b>NCP (Novel Coronavirus Pneumonia)</b>, что в переводе означает «пневмония, вызываемая новым типом коронавируса».
+				<br>
+				<br>
+				11 февраля 2020 года Всемирная Организация Здравоохранения назначила официальное название для болезни, которую вызывает SARS-CoV-2 — «Коронавирусная инфекция COVID-19» (COrona VIrus Disease 2019), или просто, <b>«COVID-19»</b>.
+				<br>
+				<br>
+				По структуре — SARS-CoV-2 является одноцепочным РНК-содержащим вирусом, который вызывает заболевания дыхательной системы человека. В связи с этим, главные клинические проявления китайского коронавируса – выраженное воспаление, покраснение и отечность в дыхательных путях, что при осложненном течении может приводить к пневмонии, удушью и летальному исходу. Среди же симптомов преобладают — лихорадка, слабость, кашель, головная и мышечная боль. 	
+				<br>
+				<br>
+				Несмотря на инкубационный период в 2-10 дней, инфицированный человек становится заразным для окружающих еще до появления первых признаков болезни. В связи с этим, в эпидемиологических целях г. Ухань и его округа были закрыты на карантин. Позже количество городов на карантине увеличилось.
+				<br>
+				<br>
+				<img src="img/CoV-2.jpg">
+				<br>
+				30 января 2020 года ВОЗ признала новый коронавирус чрезвычайной ситуацией международного значения.
+				<br>
+				11 марта 2020 Всемирная Организация Здравоохранения назначила для COVID-19 статус — пандемия.
+				</p>
+			</div>
+				</div>
+			</div>
+			
+
+<!------------------------------------------------------------------------------------>
+		</div>
+			<footer>
+				<div id="site_name">
+					<span>Автор: Фирсов Сергей Андреевич ИСТБ-18-1</span>
+				</div>
+				<div id="clear"></div>
+				
+			</footer>
+		</div>
+			<!--JQuery-->
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+			<!--Меню появляеться/исчезает-->
+			<script>
+				$('#menuShow').click(function(){
+					if($('#mobileMenu').is(':visible'))
+						$('#mobileMenu').hide();
+					else
+						$('#mobileMenu').show();
+				});
+//Фиксация меню при прокрутке (разная для телефонов и ПК)
+					$(document).scroll(function() {
+						if($(document).width()>785){if($(document).scrollTop()>$('header').height()+10)
+							$('nav').addClass('fixed');
+						else
+							$('nav').removeClass('fixed');
+					}});
+
+			window.onresize = function (event) {
+					$('#mobileMenu').hide();
+			}
+			</script>
+</body>
+</html>
